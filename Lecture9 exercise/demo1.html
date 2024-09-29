@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Block scope with let & const</title>
+</head>
+<body>
+    <script>
+        if (true) {
+            let x = 10; 
+            const y = 20;
+            console.log ("nilai x:", x);
+            console.log ("nilai y:", y);
+        }
+
+        // x dan y tidak dapat diakses dari luar blok
+        console.log ("nilai x diluar blok:",);
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template literal ES6</title>
+</head>
+<body>
+    <div id="output"></div>
+
+    <script>
+        //menggunakan template literal
+        const nama = 'Thrilya Potalangi';
+        const usia = 17;
+        const pekerjaan = 'mahasiswa';
+
+        const profil = `
+             name: ${nama} <br>
+             age: ${usia} tahun <br>
+             expertise/job: ${pekerjaan}
+        `;
+        //menampilkan output kedalam elemen HTML dengan id output
+        document.getElementById('output').innerHTML = profil;
+    </script>
+</body>
+</html>
+

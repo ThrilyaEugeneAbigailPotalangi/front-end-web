@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Membuat kelas
+        class Calculator {
+            constructor(myName) {
+                this.studentName = myName;
+            }
+
+            printStudent() {
+                return 'My name is ' + this.studentName;
+            }
+
+            // Penjumlahan
+            add(a, b) {
+                return a + b;
+            }
+
+            // Pengurangan
+            subtract(a, b) {
+                return a - b;
+            }
+
+            // Perkalian
+            multiply(a, b) {
+                return a * b;
+            }
+
+            // Pembagian
+            divide(a, b) {
+                return a / b;
+            }
+        }
+
+        // Membuat objek dari kelas
+        const myCal = new Calculator("Thrilya Potalangi");
+        document.write("<p>Me: " + myCal.printStudent() + "</p>");
+
+        // Membuat fungsi untuk kalkulasi
+        function calculate(a, b) {
+            const add = myCal.add(a, b);
+            const subtract = myCal.subtract(a, b);
+            const multiply = myCal.multiply(a, b);
+            const divide = myCal.divide(a, b);
+
+            return [add, subtract, multiply, divide];
+        }
+
+        const [add, subtract, multiply, divide] = calculate(5, 10);
+
+        document.write("<p>Sum: " + add + "</p>");
+        document.write("<p>Difference: " + subtract + "</p>");
+        document.write("<p>Product: " + multiply + "</p>");
+        document.write("<p>Division: " + divide + "</p>");
+    </script>
+</body>
+</html>
